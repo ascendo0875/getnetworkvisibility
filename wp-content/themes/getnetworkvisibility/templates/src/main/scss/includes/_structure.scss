@@ -1,0 +1,24 @@
+*:focus {outline: 0;}  
+
+html {
+    -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
+}
+
+html, body {
+  height: 100%;       
+}
+
+*, div {
+    box-sizing: border-box;  
+}
+
+img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.clearit {
+    clear: both;
+    font-size: 1px;
+    line-height: 1px;   
+}

@@ -1,0 +1,111 @@
+{
+    "key": "group_631726aa55aed",
+    "title": "Media Visual",
+    "fields": [
+        {
+            "key": "field_6319e35b3686a",
+            "label": "Caption",
+            "name": "caption",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6319bda8d555c",
+            "label": "Image",
+            "name": "image",
+            "type": "image",
+            "instructions": "Crop Identifier: Media Visual",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": 5,
+            "mime_types": ""
+        },
+        {
+            "key": "field_6319bdb2d555d",
+            "label": "Video Url",
+            "name": "video_url",
+            "type": "url",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_6319be1bd555e",
+            "label": "Scale",
+            "name": "scale",
+            "type": "select",
+            "instructions": "<em>Desktop only<\/em>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "scale-25": "Scale 25%",
+                "scale-50": "Scale 50%",
+                "scale-75": "Scale 75%",
+                "scale-100": "Scale 100%"
+            },
+            "default_value": "scale-100",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/media-visual"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1662641047
+}

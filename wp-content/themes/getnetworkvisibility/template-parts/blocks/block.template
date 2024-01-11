@@ -1,0 +1,11 @@
+<?php
+/**
+ * Block - BlockTemplate
+ * @var array $block
+ * @var string $content
+ * @var bool $is_preview
+ * @var int|string $post_id
+ */
+
+/** @var \FINNPartners\Theme\Block\Instance\Block $Block */
+$Block = new \FINNPartners\Theme\Block\Instance\Block($post_id, $block);

@@ -1,0 +1,34 @@
+// set header styles
+@mixin set-header ($color, $font, $size)   {
+    color: #{$color};
+    font-family: #{$font};
+    font-size: #{$size}; 
+}
+
+// calculate equal top and bottom padding for areas depending of paragraph padding
+@mixin calculate-padding-box ($padd, $general-padd)   {
+    padding-bottom: #{$padd - $general-padd};
+    padding-top: #{$padd};
+}
+
+//set general wrapper
+@mixin set-wrapper   {
+   padding-left: calc(50% - #{$wrapper-padding} );  
+   padding-right: calc(50% - #{$wrapper-padding} );  
+   
+   @media only screen and (max-width: $row-max) {   
+        padding-left: $wrapper-padding-mobile;
+        padding-right: $wrapper-padding-mobile;
+    } 
+}
+  
+@mixin clearfix {
+  &:after {
+    content: '';
+    display: table;
+    width: 100%;
+    height: 0.1px;
+    clear: both;
+  }
+}
+

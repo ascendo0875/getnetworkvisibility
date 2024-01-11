@@ -1,0 +1,130 @@
+// main grid
+
+$total-columns : 12;
+$row-width     : 1350px; 
+$row-max       : 1400px;   
+$wrapper-padding : 675px;  
+$wrapper-padding-mobile : 20px;
+
+$susy: (
+  columns           : $total-columns,  
+  container         : $row-width,
+  gutter-position   : after,
+  global-box-sizing : border-box,
+  /*debug           : (image: show, toggle: top right, color: #dbdbdb)*/
+);
+
+// breakpoints
+$large       : 75.063em;
+$medium      : (48.063em 75em);
+$small       : (0em 48em);
+$medium-up   : 48.063em;
+$medium-down : (0 75em);
+
+body {
+    &:before {
+       content: '{ "current": "large" }';
+       display: none;              
+    }     
+    @include breakpoint($medium) {
+       &:before {content: '{ "current": "medium" }';}
+    }
+    @include breakpoint($small) {
+       &:before {content: '{ "current": "small" }';}
+    }
+}        
+
+// general colors 
+
+$white                : #ffffff;
+$black                : #000000; 
+$dark-grey            : #49474E;
+$grey                 : #A3A1A7; 
+$light-grey           : #F8F8F8;
+$navy                 : #000039;
+$blue                 : #3A53A4;
+$mustard              : #B87626;
+
+
+// This is the default html and body font-size for the base rem value.
+$base-font-size  : 16px; 
+$rem-base        : $base-font-size; 
+
+// general fonts family and sizes
+
+$font-body                            : 'Inter', "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+$font-hdr                             : 'Inter', "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+$font-light                           : 300;        
+$font-normal                          : 400; 
+$font-medium                          : 500; 
+$font-bold                            : 700; 
+$font-xbold                           : 900; 
+$header1-font-family                  : $font-hdr;
+$header1-font-size                    : 60px;
+$header1-color                        : $dark-grey;
+$header2-font-family                  : $font-hdr;
+$header2-font-size                    : 48px;   
+$header2-color                        : $dark-grey;
+$header3-font-family                  : $font-hdr;
+$header3-font-size                    : 32px;
+$header3-color                        : $dark-grey;
+$header4-font-family                  : $font-hdr;
+$header4-font-size                    : 24px;
+$header4-color                        : $dark-grey;
+$header5-font-family                  : $font-hdr;
+$header5-font-size                    : 12px;
+$header5-color                        : $blue;  
+$header-bottom-margin                 : 15px;
+$header-line-height                   : 1.1;
+$link-color                           : $blue;  
+
+// Paddings for paragraphs and list  
+
+$paragraph-font-family         : $font-body;
+$paragraph-font-size           : 20px;
+$paragraph-font-size-sm        : 14px;
+$paragraph-font-size-l         : 25px;
+$paragraph-font-color          : $dark-grey;
+$paragraph-padding-bottom      : 15px; 
+$paragraph-margin-bottom       : 0;
+$paragraph-line-height         : 1.6;
+$paragraph-font-weight         : $font-normal;    
+$list-item-padding-bottom      : 25px; 
+
+// general radius 
+
+$global-radius  : 15px;
+
+// general padding
+
+$global-spacing : 50px;
+
+// header                      
+
+$mobile-menu-width: 300px;
+
+//buttons
+
+$button-font-family   : $font-hdr;
+$button-font-color    : $blue;
+$button-font-size     : 20px; 
+$button-radius        : 0;
+$button-bg-color      : none;
+$button-bg-hover      : $blue;
+$button-border-color  : $blue;
+$button-border-width  : 2px;
+$button-border-radius : 5px;
+
+ 
+
+// Slick
+$slick-font-path: "../fonts/";
+$slick-loader-path: "../images/";
+
+
+
+
+
+
+
+

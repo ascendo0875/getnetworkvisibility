@@ -1,0 +1,285 @@
+{
+    "key": "group_6346b3e3b401f",
+    "title": "More Solution\/Industry",
+    "fields": [
+        {
+            "key": "field_6346b7cf8b4d7",
+            "label": "Heading",
+            "name": "heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6346b3e43e364",
+            "label": "Data Post",
+            "name": "data_post",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "industry": "Industry",
+                "solution": "Solution"
+            },
+            "default_value": [],
+            "return_format": "value",
+            "multiple": 1,
+            "allow_null": 0,
+            "ui": 1,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_6346b4159ac1f",
+            "label": "Data source",
+            "name": "data_source",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Connect to current post": "Connect to current post",
+                "Related": "Related",
+                "Manual": "Manual"
+            },
+            "default_value": "Related",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 1,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_6346b45a9ac20",
+            "label": "Solutions",
+            "name": "solutions",
+            "aria-label": "",
+            "type": "relationship",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6346b3e43e364",
+                        "operator": "==",
+                        "value": "solution"
+                    },
+                    {
+                        "field": "field_6346b3e43e364",
+                        "operator": "!=",
+                        "value": "industry"
+                    },
+                    {
+                        "field": "field_6346b4159ac1f",
+                        "operator": "==",
+                        "value": "Manual"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "solution"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search",
+                "post_type",
+                "taxonomy"
+            ],
+            "return_format": "id",
+            "min": 1,
+            "max": "",
+            "elements": ""
+        },
+        {
+            "key": "field_6346b48d9ac22",
+            "label": "Industries",
+            "name": "industries",
+            "aria-label": "",
+            "type": "relationship",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6346b3e43e364",
+                        "operator": "==",
+                        "value": "market"
+                    },
+                    {
+                        "field": "field_6346b3e43e364",
+                        "operator": "!=",
+                        "value": "solution"
+                    },
+                    {
+                        "field": "field_6346b4159ac1f",
+                        "operator": "==",
+                        "value": "Manual"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "industry"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search",
+                "post_type",
+                "taxonomy"
+            ],
+            "return_format": "id",
+            "min": 1,
+            "max": 30,
+            "elements": ""
+        },
+        {
+            "key": "field_6346b4c99ac26",
+            "label": "Relaters",
+            "name": "relaters",
+            "aria-label": "",
+            "type": "relationship",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6346b3e43e364",
+                        "operator": "==",
+                        "value": "industry"
+                    },
+                    {
+                        "field": "field_6346b3e43e364",
+                        "operator": "==",
+                        "value": "solution"
+                    },
+                    {
+                        "field": "field_6346b4159ac1f",
+                        "operator": "==",
+                        "value": "Manual"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_6346b3e43e364",
+                        "operator": "==empty"
+                    },
+                    {
+                        "field": "field_6346b4159ac1f",
+                        "operator": "==",
+                        "value": "Manual"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "solution",
+                "industry"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search",
+                "post_type",
+                "taxonomy"
+            ],
+            "return_format": "id",
+            "min": 1,
+            "max": 30,
+            "elements": ""
+        },
+        {
+            "key": "field_6346b53018786",
+            "label": "Limit",
+            "name": "limit",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6346b4159ac1f",
+                        "operator": "==",
+                        "value": "Connect to current post"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_6346b4159ac1f",
+                        "operator": "==",
+                        "value": "Related"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 5,
+            "min": 3,
+            "max": 30,
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/more-solution-industry"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1666341845
+}

@@ -1,0 +1,17 @@
+{
+    "name": "finnpartners/theme",
+    "description": "Default theme",
+    "type": "wpackagist-theme",
+    "autoload": {
+        "psr-4": {
+            "FINNPartners\\Theme\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Blaga Vasile-Alexandru",
+            "email": "alex.blaga@finnpartners.com"
+        }
+    ],
+    "require": {}
+}

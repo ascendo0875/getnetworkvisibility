@@ -1,0 +1,50 @@
+{
+  "name": "finnpartners-list",
+  "description": "List",
+  "version": "1.0.0",
+  "main": "list/list.build.js",
+  "author": "FinnPartners",
+  "license": "ISC",
+  "scripts": {
+    "build": "wp-scripts build",
+    "start": "wp-scripts start"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.19.1",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/plugin-proposal-decorators": "^7.19.1",
+    "@babel/plugin-transform-runtime": "^7.19.1",
+    "@babel/preset-env": "^7.19.1",
+    "@babel/preset-typescript": "^7.18.6",
+    "@babel/runtime": "^7.19.0",
+    "@wordpress/element": "^4.16.0",
+    "@wordpress/scripts": "^24.2.0",
+    "axios": "^0.27.2",
+    "babel-loader": "^8.2.5",
+    "lodash": "^4.17.21",
+    "path": "^0.12.7",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-app-polyfill": "^3.0.0",
+    "react-dom": "^18.2.0"
+  },
+  "presets": [
+    "env",
+    "react"
+  ],
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "he": "^1.2.0"
+  }
+}

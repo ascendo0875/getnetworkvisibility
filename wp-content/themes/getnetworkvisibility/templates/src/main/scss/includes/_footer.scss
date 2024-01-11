@@ -1,0 +1,139 @@
+// footer         
+
+.site-footer {
+    background: $light-grey;
+    @include breakpoint($small) {
+        background: $navy;
+    }
+    .wrapper {
+        @include set-wrapper;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 60px;
+        padding-bottom: 45px;
+        @media only screen and (max-width: 1000px) {   
+            display: block;
+        }
+        .logo {
+            display: none;
+            border-bottom: 1px solid $white;
+            margin: 0 -20px;
+            padding: 0 20px 30px 20px;
+            img {
+                max-width: 350px;
+                width: 70%;
+            }
+            @include breakpoint($small) {
+                display: block;
+            }
+        }
+        .util {
+            flex: 0 0 300px;
+            p {
+                text-align: right;
+                font-size: 14px;
+                color: $black;
+                @media only screen and (max-width: 1000px) {   
+                    text-align: left;
+                }
+                @include breakpoint($small) {
+                    color: $white;
+                }
+                a:not(.btn) {
+                    color: $black;
+                    @include breakpoint($small) {
+                        color: $white;
+                    }
+                }
+            }
+            .btn {
+                text-transform: none;
+                @include breakpoint($small) {
+                    border-color: $white;
+                    color: $white;
+                }
+            }
+        }
+        .sitemap {
+            flex: 1 1 auto;
+            > ul {
+                column-count: 4;
+                column-gap: 30px;
+                margin: 0;
+                @include breakpoint($small) {
+                    column-count: 1;
+                    display: flex;
+                    flex-direction: column;
+                    margin-left: -20px;
+                    margin-right: -20px;
+                    margin-bottom: 30px;
+                }
+                > li {
+                    /*display: inline-block;*/
+                    page-break-inside: avoid;  
+                    break-inside: avoid-column;
+                    display:table;                 
+                    width: 100%;
+                    margin: 0;
+                    padding: 0;
+                    @include breakpoint($small) {
+                        border-bottom: 1px solid $white;
+                        padding: 10px 20px;
+                        &.menu-item-has-childrens {
+                            order: -1;
+                            a {
+                                position: relative;
+                                display: block;
+                                &:after {
+                                    content: $icon-chevron-down;
+                                    @include icon;
+                                    position: absolute;
+                                    right: 10px;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                }
+                            }
+                        }
+                    }
+                    &.not-clickable > a {
+                        cursor: text;
+                    }
+                    > a {
+                        font-size: 24px;
+                        font-weight: $font-bold;
+                        color: $dark-grey;
+                        &:hover {
+                            text-decoration: none;
+                        }
+                        @include breakpoint($small) {
+                            font-size: 16px;
+                            color: $white;  
+                            font-family: 'Arial';  
+                        }
+                    }
+                    &:before {
+                        display: none;
+                    }
+                    .sub-menu {
+                        @include breakpoint($small) {
+                            display: none;
+                        }
+                        li {
+                            margin: 0;
+                            padding: 0 0 5px 0;
+                            &:before {
+                                display: none;
+                            }
+                            a {
+                                color: $blue;
+                                font-size: 16px;
+                            }
+                        }    
+                    }
+                }
+            }
+        }
+    }
+}
+ 
+
