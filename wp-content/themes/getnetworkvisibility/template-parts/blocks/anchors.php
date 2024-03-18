@@ -15,6 +15,11 @@ $f = $blockObj->getFields();
 
 $blockObj->displayAdminAnchorHTML();
 ?>
+<style>
+.admin-bar .anchors {
+    top:177px !important;
+}
+</style>
 
 <div class="anchors <?= $blockObj->getCSSClassesAsString() ?>"
     <?= !empty($blockObj->getStyle()) ? "style='{$blockObj->getStyle()}'" : '' ?>
@@ -26,14 +31,21 @@ $blockObj->displayAdminAnchorHTML();
             <ul>
 
                 <?php foreach ($f->getNavigation() as $key => $navigation) : ?>
-                    <li class="<?= $key === 0 ? "active" : "" ?>"><a href="<?=$navigation['link']['url']?>"><?=$navigation['link']['title']?></a></li>
+                    <?php if (is_array($navigation) && isset($navigation['link']) && is_array($navigation['link'])) : ?>
+                    <li class="<?= $key === 0 ? "active" : "" ?>"><a href="<?= $navigation['link']['url'] ?>"><?= $navigation['link']['title'] ?></a></li>
+                <?php endif; ?>
                 <?php endforeach; ?>
             </ul>
             <select name="anchors" data-anchors-scroll="true">
 
                 <?php foreach ($f->getNavigation() as $key => $navigation) : ?>
-                    <option value="<?=$navigation['link']['url']?>" <?= $key === 0 ? "selected" : "" ?>><?=$navigation['link']['title']?></option>
-                <?php endforeach; ?>
+                    <?php if (is_array($navigation) && isset($navigation['link']) && is_array($navigation['link'])) : ?>
+                        <option value="<?= isset($navigation['link']['url']) ? $navigation['link']['url'] : '' ?>" <?= $key === 0 ? "selected" : "" ?>>
+                            <?= isset($navigation['link']['title']) ? $navigation['link']['title'] : '' ?>
+                        </option>
+                    <?php endif; ?>
+
+                    <?php endforeach; ?>
             </select>
         <?php endif; ?>
 
